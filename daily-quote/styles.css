@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Playfair", serif;
+}
+
+body {
+    background-color: #bbc6fa;
+}
+
+.quote-box {
+    background-color: white;
+    width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+.quote-box h2 {
+    font-size: 35px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.quote-box h2::after {
+    content: '';
+    width: 80px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: black;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#quote {
+    font-size: 25px;
+    min-height: 100px;
+}
+
+.author {
+    display: block;
+    margin-top: 20px;
+    float: right;
+    position: relative;
+    font-weight: bold;
+}
+
+.button-container {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    background-color: rgb(23, 124, 229);
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 5px;
+    display: flex;
+    border: 1px solid rgb(23, 124, 229);
+    width: 150px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.button-container button img {
+    margin-right: 10px;
+    width: 20px;
+}
+
+.quote-box button:last-child {
+    background: transparent;
+    color: #333;
+}

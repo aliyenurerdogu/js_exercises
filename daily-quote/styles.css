@@ -47,9 +47,9 @@ body {
     min-height: 100px;
 }
 
-.author {
+#author {
     display: block;
-    margin-top: 20px;
+    margin-top: 30px;
     float: right;
     position: relative;
     font-weight: bold;

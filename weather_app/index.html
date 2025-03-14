@@ -10,15 +10,26 @@
 
 <body>
     <div class="container">
-        <input id="city" type="text" placeholder="Enter city name">
-        <button id="getWeatherButton">Get Weather</button>
+        <div class="input-container">
+            <input id="city" type="text" placeholder="Enter city name">
+            <button id="getWeatherButton">Get Weather</button>
+        </div>
         <div class="weather-container">
-            <img id="weatherIcon" />
+
             <h2 id="cityName"></h2>
-            <p id="temperature"></p>
-            <p id="humidity"></p>
-            <p id="wind"></p>
-            <p id="weatherDetails"></p>
+            <div class="temperature-container">
+                <img id="weatherIcon" />
+                <p id="temperature"></p>
+            </div>
+            <div class="humidity-container">
+                <img id="humidityIcon">
+                <p id="humidity"></p>
+            </div>
+            <div class="wind-container">
+                <img id="windIcon">
+                <p id="wind"></p>
+            </div>
+
         </div>
     </div>
     <script src="app.js"></script>

@@ -60,6 +60,7 @@ updateWeatherData = (data) => {
         document.getElementById('temperature').textContent = `${data.main.temp}°C`;
         document.getElementById('humidity').textContent = `${data.main.humidity}%`;
         document.getElementById('wind').textContent = `${data.wind.speed}m/s`;
+        document.getElementById('weatherIcon').src = iconUrl;
         document.getElementById('humidityIcon').src = humidityIcon;
         document.getElementById('windIcon').src = windIcon;
         if (data.coord) {

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="keys">
+        <div data-key="65" class="key">
+            <kbd>A</kbd>
+            <span class="sound">clap</span>
+        </div>
+        <div data-key="83" class="key">
+            <kbd>S</kbd>
+            <span class="sound">hihat</span>
+        </div>
+        <div data-key="68" class="key">
+            <kbd>D</kbd>
+            <span class="sound">kick</span>
+        </div>
+        <div data-key="70" class="key">
+            <kbd>F</kbd>
+            <span class="sound">openhat</span>
+        </div>
+        <div data-key="71" class="key">
+            <kbd>G</kbd>
+            <span class="sound">boom</span>
+        </div>
+        <div data-key="72" class="key">
+            <kbd>H</kbd>
+            <span class="sound">ride</span>
+        </div>
+        <div data-key="74" class="key">
+            <kbd>J</kbd>
+            <span class="sound">snare</span>
+        </div>
+        <div data-key="75" class="key">
+            <kbd>K</kbd>
+            <span class="sound">tom</span>
+        </div>
+        <div data-key="76" class="key">
+            <kbd>L</kbd>
+            <span class="sound">tink</span>
+        </div>
+    </div>
+    <audio data-key="65" src="sounds/BasicClap_01_534.wav"></audio>
+    <audio data-key="83" src="sounds/HiHat_SP_300_07.wav"></audio>
+    <audio data-key="68" src="sounds/ClubKick_01_603.wav"></audio>
+    <audio data-key="70" src="sounds/TD6K_OpenHat_029_73_SP.wav"></audio>
+    <audio data-key="71" src="sounds/808_Boom_03_SP_447.wav"></audio>
+    <audio data-key="72" src="sounds/03_AnastasiaRide_01_75_SP.wav"></audio>
+    <audio data-key="74" src="sounds/Snare_13_685.wav"></audio>
+    <audio data-key="75" src="sounds/TD6K_Tom_113_73_SP.wav"></audio>
+    <audio data-key="76" src="sounds/Tink_SP_160_01.wav"></audio>
+
+    <script>
+        window.addEventListener('keydown', (e) => {
+            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+            const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+            if (!audio) return; // stop the funcion from running all together
+            audio.currentTime = 0; // rewind to start
+            audio.play();
+            console.log(key);
+        });
+
+    </script>
+
+</body>
+
+</html>
